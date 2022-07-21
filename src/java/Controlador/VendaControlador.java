@@ -96,7 +96,7 @@ public class VendaControlador extends HttpServlet {
             if (dao.gravar(venda)) {
                 mensagem = "Venda gravada com sucesso!";
             } else {
-                mensagem = "Erro ao gravar venda!";
+                mensagem = "Erro ao gravar Venda!";
             }
 
             request.setAttribute("mensagem", mensagem);

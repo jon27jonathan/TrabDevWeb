@@ -1,4 +1,4 @@
-package Modelo;
+ package Modelo;
 
 import java.sql.SQLException;
 import java.sql.Connection;
@@ -92,7 +92,7 @@ public class VendaDAO extends HttpServlet {
                 sql = "INSERT INTO vendas (quantidade_venda, data_venda, valor_venda, id_cliente, id_produto, id_funcionario) VALUES (?,?,?,?,?,?)";
             } else {
                 // Realizar uma alteração
-                sql = "UPDATE vendas SET nome_categoria=?, data_venda=?, valor_venda=?, id_cliente=?, id_produto=?, id_funcionario=? WHERE id=?";
+                sql = "UPDATE vendas SET quantidade_venda=?, data_venda=?, valor_venda=?, id_cliente=?, id_produto=?, id_funcionario=? WHERE id=?";
             }
 
             PreparedStatement ps = conexao.prepareStatement(sql);
