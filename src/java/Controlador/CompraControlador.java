@@ -80,7 +80,7 @@ public class CompraControlador extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String mensagem;
-        try {
+        try { 
             Compra compra = new Compra();
             //Enviar valores dos atributos
             compra.setId(Integer.parseInt(request.getParameter("id")));
