@@ -8,6 +8,9 @@
       <li class="nav-item">
         <a class="nav-link" href="VendaController?acao=mostrar">Vendas</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="FuncionarioController?acao=mostrar">Funcionario</a>
+      </li>
     </ul>
       <a class="nav-link" href="Logout">Sair</a>
   </div>
