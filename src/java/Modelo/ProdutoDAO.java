@@ -91,10 +91,10 @@ public class ProdutoDAO extends HttpServlet {
             String sql;
             if (produto.getId() == 0) {
                 // Realizar uma inclusão
-                sql = "INSERT INTO produtos (nome_produto, descricao, preco_compra, preco_venda, quantidade_disponível, liberado_venda, id_categoria) VALUES (?,?,?,?,?,?,?)";
+                sql = "INSERT INTO produtos (nome_produto,descricao,preco_compra,preco_venda,quantidade_disponível,liberado_venda,id_categoria) VALUES (?,?,?,?,?,?,?)";
             } else {
                 // Realizar uma alteração
-                sql = "UPDATE produtos SET nome_produto=?, descricao=?, preco_compra=?, preco_venda=?, quantidade_disponível=?, liberado_venda=?, id_categoria=? WHERE id=?";
+                sql = "UPDATE produtos SET nome_produto=?,descricao=?,preco_compra=?,preco_venda=?,quantidade_disponível=?,liberado_venda=?,id_categoria=? WHERE id=?";
             }
 
             PreparedStatement ps = conexao.prepareStatement(sql);
@@ -112,6 +112,34 @@ public class ProdutoDAO extends HttpServlet {
 
             ps.execute();
 
+            return true;
+        } catch (SQLException e) {
+            System.out.println("Erro de SQL: " + e.getMessage());
+            return false;
+        }
+    }
+    
+    public boolean incrementarEstoque(int id,int quantidade){
+        try {
+            String sql = "UPDATE produtos SET quantidade_disponível = (quantidade_disponível + ?) WHERE id=?";
+            PreparedStatement ps = conexao.prepareStatement(sql);
+            ps.setInt(1, quantidade);
+            ps.setInt(2, id);
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            System.out.println("Erro de SQL: " + e.getMessage());
+            return false;
+        }
+    }
+    
+    public boolean decrementarEstoque(int id,int quantidade){
+        try {
+            String sql = "UPDATE produtos SET quantidade_disponível = (quantidade_disponível - ?) WHERE id=?";
+            PreparedStatement ps = conexao.prepareStatement(sql);
+            ps.setInt(1, quantidade);
+            ps.setInt(2, id);
+            ps.execute();
             return true;
         } catch (SQLException e) {
             System.out.println("Erro de SQL: " + e.getMessage());
