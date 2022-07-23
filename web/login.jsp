@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/css/Header.css">
     </head>
     <header>
-            <a class='button' href="index.jsp">Canadian Burguer</a>
+            <a class='button' href="index.jsp">Canadian Store</a>
             <a class='button' href="login.jsp">Login</a>
     </header>
     <body>

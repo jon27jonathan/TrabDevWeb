@@ -25,6 +25,10 @@
         <servlet-class>Controller.ProdutoControllerAdm</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>ProdutoControllerCli</servlet-name>
+        <servlet-class>Controller.ProdutoControllerCli</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>CategoriaController</servlet-name>
         <servlet-class>Controller.CategoriaControlador</servlet-class>
     </servlet>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>ProdutoControllerAdm</servlet-name>
         <url-pattern>/ProdutoControllerAdm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutoControllerCli</servlet-name>
+        <url-pattern>/ProdutoControllerCli</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CategoriaController</servlet-name>

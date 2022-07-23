@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canadian Burguer</title>
+    <title>Canadian Store</title>
     <!-- Importando estilo de background e título do arquivo CSS-->
     <link rel="stylesheet" href="css/css/BodyPage1.css">
     <link rel="stylesheet" href="css/css/Headerbutao.css">
@@ -28,14 +28,14 @@
     <main class='body'>
         <!--descrição-->
         <section class='summary'>
-          <h2>Hamburgueres Deliciosos, Entregues para você</h2>
+          <h2>Produtos incríveis e diversos, Entregues para você</h2>
           <p>
-            Escolha qual é o seu hamburguer favorito da nossa vasta seleção,
-            eles servem para te satisfazerem tanto no almoço quanto no jantar.
+            Escolha qual é o seu produto favorito da nossa vasta e aleatória seleção,
+           prometo que não irá se arrepender!!
           </p>
           <p>
-            Produzido com alta qualidade de ingredientes, chega rapidinho e é claro,
-            feito com chefes profissionais!!
+            Produzido com alta qualidade de materiais, chega rapidinho e é claro,
+            entregues com muito amor e cuidado!!
           </p>
         </section>
     </main>
@@ -43,6 +43,9 @@
     </body>
     <jsp:include page="scripts.html" />  
     <br><footer>
+        <br><center>-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-</center>
+        <br><center><a class="navbar-brand" href="ProdutoControllerCli?acao=mostrar">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClique aqui para ver nossos Produtos!!&nbsp&nbsp&nbsp</a></center>
+        <br><center>-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-</center>
         <br><center>Juliana Scapim e Jonathan Silva 15/05/2022</center>
     </footer>
 
