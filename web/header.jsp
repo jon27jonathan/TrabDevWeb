@@ -16,10 +16,10 @@
                 <jsp:include page="header_adm.jsp" />
                 <%break;
             case 1:%>
-                <jsp:include page="header_comp.jsp" />
+                <jsp:include page="header_vend.jsp" />
                 <%break;
             case 2:%>
-                <jsp:include page="header_vend.jsp" />
+                <jsp:include page="header_comp.jsp" />
                 <%break;
             }
         }
