@@ -7,6 +7,20 @@
         <link rel="stylesheet" href="css/css/BodyPage1.css">
     </head>
     <body>
+        
+        <% if (session == null){ %>
+            <jsp:forward page="login.jsp" />
+        <% } else {
+                if(session.getAttribute("usuario") == null) {%>
+                <jsp:forward page="login.jsp"/>
+        <%      } else {
+                    Funcionario usuario = (Funcionario) session.getAttribute("usuario");
+                    if(usuario.getPapel() != 1){%>
+                        <jsp:forward page="index.jsp"/>
+        <%          }
+                }
+        }%>
+        
         <div class="container mt-2">
             
             <jsp:include page="header.jsp" />
