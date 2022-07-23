@@ -1,4 +1,4 @@
-package Controlador;
+package Controller;
 
 import Aplicacao.Fornecedor;
 import java.io.IOException;

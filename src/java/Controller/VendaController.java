@@ -1,4 +1,4 @@
-package Controlador;
+package Controller;
 
 import Aplicacao.Venda;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import Modelo.VendaDAO;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 
-public class VendaControlador extends HttpServlet {
+public class VendaController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

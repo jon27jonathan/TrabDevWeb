@@ -3,10 +3,10 @@
     <ul class="navbar-nav mr-auto">
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="ProdutoController?acao=mostrar">Produtos</a>
+        <a class="nav-link" href="ProdutoControllerAdm?acao=mostrar">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="VendaController?acao=mostrar">Vendas</a>
+        <a class="nav-link" href="VendaControllerAdm?acao=mostrar">Vendas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="FuncionarioController?acao=mostrar">Funcionario</a>

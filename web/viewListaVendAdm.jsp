@@ -12,7 +12,8 @@
             <jsp:include page="header.jsp" />
             
             <h1>Lista de Vendas</h1>
-
+            <p></p>
+            <p></p>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -24,7 +25,6 @@
                             <th scope="col">Id Cliente</th>
                             <th scope="col">Id Produto</th>
                             <th scope="col">Id Funcionario</th>
-                         
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +41,7 @@
                             <td><%=aux.getId_cliente()%></td> 
                             <td><%=aux.getId_produto()%></td> 
                             <td><%=aux.getId_funcionario()%></td> 
-                            
+                            </td> 
                            
                         </tr>
                         <%

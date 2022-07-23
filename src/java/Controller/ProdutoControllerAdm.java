@@ -1,36 +1,34 @@
-package Controlador;
+package Controller;
 
-import Aplicacao.Venda;
+import Aplicacao.Produto;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Modelo.VendaDAO;
+import Modelo.ProdutoDAO;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 
-public class VendaControllerAdm extends HttpServlet {
+public class ProdutoControllerAdm extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        VendaDAO vendaDAO = new VendaDAO();
+        ProdutoDAO produtoDAO = new ProdutoDAO();
         String acao = (String) request.getParameter("acao");
         int id;
-        ArrayList<Venda> meusVendas;
+        ArrayList<Produto> meusProdutos;
 
-        Venda venda = new Venda();
+        Produto produto = new Produto();
         switch (acao) {
             case "mostrar":
-                meusVendas = vendaDAO.getListaVenda();
-                request.setAttribute("meusVendas", meusVendas);
-                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/viewListaVendAdm.jsp");
+                meusProdutos = produtoDAO.getListaProduto();
+                request.setAttribute("meusProdutos", meusProdutos);
+                RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/viewListaProdAdm.jsp");
                 mostrar.forward(request, response);
                 break;
-
         }
     }
-    
 }

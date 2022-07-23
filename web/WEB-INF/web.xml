@@ -2,7 +2,7 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>ValidarLogin</servlet-name>
-        <servlet-class>Controlador.ValidarLogin</servlet-class>
+        <servlet-class>Controller.ValidarLogin</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Conexao</servlet-name>
@@ -14,31 +14,39 @@
     </servlet>
     <servlet>
         <servlet-name>FuncionarioController</servlet-name>
-        <servlet-class>Controlador.FuncionarioControlador</servlet-class>
+        <servlet-class>Controller.FuncionarioControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VendaControllerAdm</servlet-name>
+        <servlet-class>Controller.VendaControllerAdm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProdutoControllerAdm</servlet-name>
+        <servlet-class>Controller.ProdutoControllerAdm</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CategoriaController</servlet-name>
-        <servlet-class>Controlador.CategoriaControlador</servlet-class>
+        <servlet-class>Controller.CategoriaControlador</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ClienteController</servlet-name>
-        <servlet-class>Controlador.ClienteControlador</servlet-class>
+        <servlet-class>Controller.ClienteControlador</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CompraController</servlet-name>
-        <servlet-class>Controlador.CompraControlador</servlet-class>
+        <servlet-class>Controller.CompraControlador</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FornecedorController</servlet-name>
-        <servlet-class>Controlador.FornecedorControlador</servlet-class>
+        <servlet-class>Controller.FornecedorControlador</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProdutoController</servlet-name>
-        <servlet-class>Controlador.ProdutoControlador</servlet-class>
+        <servlet-class>Controller.ProdutoControlador</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VendaController</servlet-name>
-        <servlet-class>Controlador.VendaControlador</servlet-class>
+        <servlet-class>Controller.VendaController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CategoriaDAO</servlet-name>
@@ -66,11 +74,11 @@
     </servlet>
     <servlet>
         <servlet-name>Logout</servlet-name>
-        <servlet-class>Controlador.Logout</servlet-class>
+        <servlet-class>Controller.Logout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>Controlador.Login</servlet-class>
+        <servlet-class>Controller.Login</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ValidarLogin</servlet-name>
@@ -87,6 +95,14 @@
     <servlet-mapping>
         <servlet-name>FuncionarioController</servlet-name>
         <url-pattern>/FuncionarioController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VendaControllerAdm</servlet-name>
+        <url-pattern>/VendaControllerAdm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutoControllerAdm</servlet-name>
+        <url-pattern>/ProdutoControllerAdm</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CategoriaController</servlet-name>
