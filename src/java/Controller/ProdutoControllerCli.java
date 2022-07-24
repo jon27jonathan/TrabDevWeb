@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Modelo.ProdutoDAO;
+import Modelo.ProdutoDAOCli;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 
@@ -16,7 +16,7 @@ public class ProdutoControllerCli extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        ProdutoDAO produtoDAO = new ProdutoDAO();
+        ProdutoDAOCli produtoDAO1 = new ProdutoDAOCli();
         String acao = (String) request.getParameter("acao");
         int id;
         ArrayList<Produto> meusProdutos;
@@ -24,7 +24,7 @@ public class ProdutoControllerCli extends HttpServlet {
         Produto produto = new Produto();
         switch (acao) {
             case "mostrar":
-                meusProdutos = produtoDAO.getListaProduto();
+                meusProdutos = produtoDAO1.getListaProduto();
                 request.setAttribute("meusProdutos", meusProdutos);
                 RequestDispatcher mostrar = getServletContext().getRequestDispatcher("/viewListaProdCli.jsp");
                 mostrar.forward(request, response);
