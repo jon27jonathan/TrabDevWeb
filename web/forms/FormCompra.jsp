@@ -1,3 +1,4 @@
+<%@page import="Aplicacao.Funcionario"%>
 <%@page import="Aplicacao.Compra"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,6 +8,20 @@
         <link rel="stylesheet" href="css/css/BodyPage1.css">
     </head>
     <body>
+        
+        <% if (session == null){ %>
+            <jsp:forward page="login.jsp" />
+        <% } else {
+                if(session.getAttribute("usuario") == null) {%>
+                <jsp:forward page="login.jsp"/>
+        <%      } else {
+                    Funcionario usuario = (Funcionario) session.getAttribute("usuario");
+                    if(usuario.getPapel() != 2){%>
+                        <jsp:forward page="index.jsp"/>
+        <%          }
+                }
+        }%>
+        
         <div class = "container mt-2">
             
             <jsp:include page="../header.jsp" />
